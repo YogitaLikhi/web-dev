@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Assignment 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            var x = t + "000";
+            x = parseInt(x);
+            var arr = [];
+            arr[0] = "img/1.jpg";
+            arr[1] = "img/2.jpg";
+            arr[2]= "img/3.jpg";
+            var i = 0;
+            function slide()
+            {        
+                document.images["image"].src = arr[i];
+                i++;
+                if(i==arr.length)
+                {
+                    i = 0;
+                }
+                setTimeout(slide(),4000);
+            }
+
+
+
+            function validatenum()
+            {
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                var pattn = /[A-Z,a-z]/;
+                var r1 = pattn.test(a);
+                var r2 = pattn.test(b);
+                if(r1==true || r2==true)
+                {
+                    alert("Enter only numeric values");
+                }
+            }
+            function sum()
+            {
+                validatenum();
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                document.getElementById("res").value = parseInt(a) + parseInt(b);
+            }
+            function sub()
+            {
+                validatenum();
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                document.getElementById("res").value = parseInt(a) - parseInt(b);
+            }
+            function mul()
+            {
+                validatenum();
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                document.getElementById("res").value = parseInt(a) * parseInt(b);
+            }
+            function div()
+            {
+                validatenum();
+                var a = document.getElementById("n1").value;
+                var b = document.getElementById("n2").value;
+                document.getElementById("res").value = parseInt(a) / parseInt(b);
+            }
+
+
+            function validatemail()
+            {
+                var m = document.getElementById("email").value;
+                var mobj = document.getElementById("email");
+                var pattn = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                var result = pattn.test(m);
+                if(result==true)
+                {
+                    mobj.style.backgroundColor = "green";
+                }
+                else
+                {
+                    mobj.style.backgroundColor = "red";
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color:cornsilk; padding: 70px;">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>
+                        <input  type="text" placeholder="Enter time" id="time">
+                        <button class="btn btn-danger" type="button" onclick="slide()">Submit</button>
+                    </th>
+                    <th>
+                        <img id="image"  height="200" width="200">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="text" placeholder="Enter num 1" id="n1">
+                        <input type="text" placeholder="Enter num 2" id="n2">
+                        <input type="text" placeholder="Result" id="res">
+                        <button class="btn btn-warning" type="button" onclick="sum()">ADD</button>
+                        <button class="btn btn-warning" type="button" onclick="sub()">SUBTRACT</button>
+                        <button class="btn btn-warning" type="button" onclick="mul()">MULTIPLY</button>
+                        <button class="btn btn-warning" type="button" onclick="div()">DIVIDE</button>
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="text" placeholder="Enter email-id" id="email" onkeyup="validatemail()">
+                    </th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
