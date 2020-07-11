@@ -7,22 +7,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script>
-            var x = t + "000";
-            x = parseInt(x);
             var arr = [];
             arr[0] = "img/1.jpg";
             arr[1] = "img/2.jpg";
             arr[2]= "img/3.jpg";
+            arr[3]= "img/4.jpg";
+            arr[4]= "img/5.jpg";
+            arr[5]= "img/6.jpg";
+            arr[6]= "img/7.jpg";
+            arr[7]= "img/8.jpg";
+            arr[8]= "img/9.jpg";
+            arr[9]= "img/10.jpg";
             var i = 0;
             function slide()
             {        
-                document.images["image"].src = arr[i];
-                i++;
-                if(i==arr.length)
-                {
-                    i = 0;
-                }
-                setTimeout(slide(),4000);
+               var time = document.getElementById("time").value;
+               console.log(time);
+               document.image.src = arr[i];
+               if(i< arr.length-1)
+               {
+                   i++;
+               }
+               else
+               {
+                   i=0;
+               }
+               setTimeout("slide()",time);
             }
 
 
@@ -93,9 +103,10 @@
                     <th>
                         <input  type="text" placeholder="Enter time" id="time">
                         <button class="btn btn-danger" type="button" onclick="slide()">Submit</button>
+
                     </th>
                     <th>
-                        <img id="image"  height="200" width="200">
+                        <img name="image" src="img/1.jpg" width="250" height="250">
                     </th>
                 </tr>
                 <tr>
