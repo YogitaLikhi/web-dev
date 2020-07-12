@@ -56,7 +56,10 @@ img.profile{
     color: white;
 }
 
-@media (min-width:800px) and (max-width:1350px){
+@media screen and (max-width:1000px){
+    .body{
+        height: 60%;
+    }
     .center{
         margin-top: auto;
         margin-bottom: auto;
@@ -71,7 +74,10 @@ img.profile{
     }
 }
 
-@media (max-width:799px){
+@media screen and (max-width:900px){
+    .body{
+        height: 60%;
+    }
     .center{
         margin-top: auto;
         margin-bottom: auto;
