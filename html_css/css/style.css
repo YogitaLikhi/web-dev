@@ -56,28 +56,20 @@ img.profile{
     color: white;
 }
 
-@media screen and (max-width:1000px){
-    .body{
-        height: 60%;
-    }
+@media (min-width:800px) and (max-width:1350px){
+    
     .center{
         margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
+        
     }
     
 }
 
-@media screen and (max-width:900px){
-    .body{
-        height: 60%;
-    }
+@media (max-width:799px){
+    
     .center{
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 200px;
+        
     }
     
 }
