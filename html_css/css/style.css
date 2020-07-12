@@ -57,8 +57,11 @@ img.profile{
 }
 
 @media (min-width:800px) and (max-width:1350px){
-    body{
-        margin-top: 180px;
+    .center{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     table.center tr:first-child td:first-child{
         height: 550px;
@@ -69,8 +72,11 @@ img.profile{
 }
 
 @media (max-width:799px){
-    body{
-        margin-top: 180px;
+    .center{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     table.center tr:first-child td:first-child{
         height: 550px;
