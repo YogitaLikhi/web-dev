@@ -66,12 +66,7 @@ img.profile{
         margin-left: auto;
         margin-right: auto;
     }
-    table.center tr:first-child td:first-child{
-        height: 550px;
-    }
-    table.center tr:first-child td:nth-child(even){
-        height: 550px;
-    }
+    
 }
 
 @media screen and (max-width:900px){
@@ -84,12 +79,5 @@ img.profile{
         margin-left: auto;
         margin-right: auto;
     }
-    table.center tr:first-child td:first-child{
-        height: 550px;
-        width: 300px;
-    }
-    table.center tr:first-child td:nth-child(even){
-        height: 550px;
-        width: 300px;
-    }    
+    
 }
