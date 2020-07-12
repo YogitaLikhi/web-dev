@@ -57,20 +57,17 @@ img.profile{
 }
 
 @media (min-width:800px) and (max-width:1350px){
-    
-    .center{
-        margin-top: auto;
+    .container{
+        height: 100vw;
     }
+    
     
 }
 
 @media (max-width:799px){
-    
-    .center{
-        margin-top: 200px;
+    .container{
+        height: 100vw;
     }
-    table.center tr:first-child td:first-child{
-        height: 750px;
-    }
+   
     
 }
